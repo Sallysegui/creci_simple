@@ -12,12 +12,8 @@ var cors = require('cors');
 
 
 app.use(bodyParser.json());
-
 const { Recurso } = require('./models/recurso');
-
-
 app.use(cookieParser());
-
 app.use(express.static('client/build'))
 
 
@@ -174,14 +170,11 @@ app.post('/upload',function(req, res) {
 if(process.env.NODE_ENV ==='production'){
     const path=require('path');
     app.get('/*',(req,res)=>{
-    res.sendfile(path.resolve(__dirname,'../client','build', 'index.html'))
-    
-    
+    res.sendfile(path.resolve(__dirname,'../client','build','index.html'))
     })
 }
 
 const port = process.env.PORT || 3001;
-
 app.listen(port,()=>{
     console.log(`Started on port ${port}`);
 })
