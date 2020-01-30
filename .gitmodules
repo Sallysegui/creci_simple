@@ -1,0 +1,4 @@
+[submodule "creci_simple"]
+	path = creci_simple
+	url = https://github.com/Sallysegui/creci_simple.git
+	branch = master
