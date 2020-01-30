@@ -42,60 +42,6 @@ app.get('/api/recursos',(req,res)=>{
     })
 })
 
-// app.get('/api/recusubject',(req,res)=>{
-//     // locahost:3001/api/recursos?skip=3&limit=2&order=asc
-//     let limit = parseInt(req.query.limit);
-//     let order = req.query.order;
-//     let skip = parseInt(req.query.skip);
-//     let subject = req.query.subject;
-//     let topic=req.query.topic;
-//     let ciclo=req.query.ciclo;
-//     let type = req.query.type;
-//     let language = req.query.language;
- 
-//     let filters=[]
-//     let filterSub
-
-//     if(subject){
-//         filterSub ={subject:subject};
-//         filters.push(filterSub)
-//     } 
-
-//     if (topic){
-//         filter =topic;
-//         filter = filter.map((item)=>{
-//             let objS = {};
-//             objS={"topic":item}
-//             return objS;
-//         })
-//         filterTopic={$or:filter}
-//         filters.push(filterTopic) 
-//     } 
-
-//     if(ciclo){
-//         filterCilc ={ciclo:ciclo};
-//         filters.push(filterCilc)
-//     } 
-//     if(type){
-//         filtertype ={type:type};
-//         filters.push(filtertype)
-//     } 
-//     if(language){
-//         filterlanguage ={language:language};
-//         filters.push(filterlanguage)
-//     } 
-//     if (filters.length>1){
-//         filterAdded={$and:filters}
-//     } else {
-//         filterAdded=filters[0]
-//     }
-
-//     // ORDER = asc || desc
-//     Recurso.find(filterAdded).skip(skip).sort({rating:order}).limit(limit).exec((err,docus)=>{
-//         if(err) return res.status(400).send(err);
-//         res.send(docus);
-//     })
-// })
 
 
 //  POST  //
@@ -138,6 +84,8 @@ app.delete('/api/delete_recurso',(req,res)=>{
 
 
 //////////////////////////////////////////////////////////////
+//This is the part that doesn't work
+
 app.use(cors())
 
 
